@@ -15,7 +15,6 @@
                                             <label>Alamat</label>
                                             <input type="text" class="form-control" value="{{ $administrasi->pasien->alamat}}" disabled>
                                             <label>Jenis Kelamin</label>
-                                            <input type="text" class="form-control" value="{{ $administrasi->pasien->jenis_kelamin}}" disabled>
                                             <label>Poli</label>
                                             <input type="text" class="form-control" value="{{ $administrasi->poli}}" disabled>
                                             <label>Dokter</label>

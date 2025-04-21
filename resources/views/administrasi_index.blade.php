@@ -71,7 +71,7 @@
             <form action="{{ route('administrasi.destroy', $item->id) }}" method="POST"
                           class="d-inline"
                                         onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
-                                                    @method('DELETE')
+                                                    @method ('DELETE')
                                                                 @csrf
                                                                             <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                                                                                     </form>

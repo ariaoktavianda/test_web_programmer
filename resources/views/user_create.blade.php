@@ -22,7 +22,7 @@
                 <div class="form-group mt-1">
                     <label for="role">Role</label>
                     <select name="role" class="form-control">
-                        <option value="staff" @selected(old('role') == 'operator')> Staff</option>
+                        <option value="staff" @selected(old('role') == 'operator')> Operator</option>
                         <option value="admin" @selected(old('role') == 'admin')> Admin </option>
                         <option value="dokter" @selected(old('role') == 'dokter')> Dokter </option>
                         <option value="kasir" @selected(old('role') == 'kasir')> Kasir </option>

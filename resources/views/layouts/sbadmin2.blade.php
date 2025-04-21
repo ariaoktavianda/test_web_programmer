@@ -124,7 +124,7 @@
 
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            @if (auth()->user()->role == 'admin' || auth()->user() == 'operator')
+            @if (auth()->user()->role == 'admin' || auth()->user()->role == 'dokter')
                 <li class="nav-item {{ Route::is('administrasi.index') ? 'active' : '' }} ">
                     <a class="nav-link" href="/administrasi">
                         <i class="fas fa-fw fa-cogs"></i>
