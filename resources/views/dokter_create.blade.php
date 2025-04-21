@@ -18,12 +18,15 @@
                     <span class="text-danger">{{ $errors->first('foto') }}</span>
                 </div>
                 <div class="form-group mt-3">
-                    <label for="spesialis">Spesialis</label>
+                    <label for="spesialis">Dokter Spesialis</label>
                     <select name="spesialis" class="form-control">
                         <option value="mata" @selected(old('spesialis') == 'mata')> Spesialis Mata</option>
                         <option value="tht" @selected(old('spesialis') == 'tht')> Spesialis THT</option>
                         <option value="jantung" @selected(old('spesialis') == 'jantung')> Spesialis Jantung</option>
                         <option value="paru" @selected(old('spesialis') == 'paru')> Spesialis Paru</option>
+                        <option value="gigi" @selected(old('spesialis') == 'gigi')> Spesialis Gigi</option>
+                        <option value="bedah" @selected(old('spesialis') == 'bedah')> Spesialis Bedah</option>
+                        <option value="anak" @selected(old('spesialis') == 'anak')> Spesialis Anak</option>
                     </select>
                     <span class="text-danger">{{ $errors->first('spesialis') }}</span>
                 </div>

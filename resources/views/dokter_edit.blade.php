@@ -22,7 +22,7 @@
                     <img src="{{ Storage::url($dokter->foto) }}" width="100px" height="100px" alt="foto dokter">
                 @endif
                 <div class="form-group mt-3">
-                    <label for="spesialis">Spesialis</label>
+                    <label for="spesialis">Dokter Spesialis</label>
                     <select name="spesialis" class="form-control">
                         <option value="mata" @selected($dokter->spesialis == 'mata')> Spesialis Mata</option>
                         <option value="tht" @selected($dokter->spesialis == 'tht')> Spesialis THT</option>
@@ -30,6 +30,7 @@
                             Spesialis Jantung
                         </option>
                         <option value="paru" @selected($dokter->spesialis == 'paru')> Spesialis Paru </option>
+                        <option value="anak" @selected($dokter->spesialis == 'anak')> Spesialis Anak </option>
                     </select>
                     <span class="text-danger">{{ $errors->first('spesialis') }}</span>
                 </div>

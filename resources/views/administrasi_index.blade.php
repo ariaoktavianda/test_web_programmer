@@ -63,19 +63,20 @@
                                         style="font-size: 100% !important;">{{ $item->status }}</span>
                                 </td>
                                 <td>
-                                    <a href="/administrasi/{{ $item->id }}/edit" class="btn btn-success">
-                                        Diagnosis
-                                    </a>
-                                    @if (auth()->user()->role == 'admin')
-                                        <form action="{{ route('administrasi.destroy', $item->id) }}" method="POST"
-                                            class="d-inline"
-                                            onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
-                                            @method('DELETE')
-                                            @csrf
-                                            <button type="submit" class="btn btn-danger">Hapus</button>
-                                        </form>
-                                    @endif
-                                </td>
+    <a href="/administrasi/{{ $item->id }}/edit" class="btn btn-success btn-sm">Diagnosis</a>
+    @if (auth()->user()->role == 'admin' || auth()->user()->role == 'kasir')
+            <a href="{{ route('kasir.create', $item->id) }}" class="btn btn-primary btn-sm">Tagih</a>
+                @endif
+    @if (auth()->user()->role == 'admin')
+            <form action="{{ route('administrasi.destroy', $item->id) }}" method="POST"
+                          class="d-inline"
+                                        onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                                    @method('DELETE')
+                                                                @csrf
+                                                                            <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                                                                                    </form>
+                                                                                        @endif
+                                                                                        </td>
                             </tr>
                         @endforeach
                     </tbody>

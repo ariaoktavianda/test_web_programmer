@@ -13,6 +13,7 @@ use App\Http\Middleware\Admin;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\KasirController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +42,12 @@ Route::middleware(Authenticate::class)->group(function () {
     Route::resource('obat', ObatController::class)->middleware(Admin::class);
     Route::resource('administrasi', AdministrasiController::class);
     Route::get('laporan/administrasi', [LaporanAdmController::class, 'index'])->name('laporan.adm');
+    Route::get('/kasir/{id}/create', [KasirController::class, 'create'])->name('kasir.create');
+    Route::post('kasir', [KasirController::class, 'store'])->name('kasir.store');
+    Route::get('/transaksi/{id}', [KasirController::class, 'show'])->name('kasir.show');
+    Route::get('/transaksi', [KasirController::class, 'index'])->name('kasir.index');
+    Route::get('/transaksi/{id}/edit', [KasirController::class, 'edit'])->name('kasir.edit');
+    
 });
 
 //membuat route logout
@@ -53,3 +60,4 @@ Auth::routes([
     //menghilangkan fungsi register di halaman login
     'register' => false
 ]);
+

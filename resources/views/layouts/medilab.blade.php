@@ -73,7 +73,7 @@
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
                     <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
                     <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
-                    <li><a class="nav-link scrollto" href="/login">Login Admin</a></li>
+                    <li><a class="nav-link scrollto" href="/login">Login</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
