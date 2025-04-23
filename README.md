@@ -1,6 +1,5 @@
 # Test Web Programmer
 
-Aplikasi Klinik ini dikembangkan untuk keperluan Tes Web Programmer di PT. Inova Medika Solusindo
 
 1. **role**
 
@@ -66,8 +65,4 @@ php artisan serve
 
 login ada di atas
 
-Pada halaman awal saya menggunkaan template bootstrap untuk mendesign register agar terlihat rapih.
 
-Saya menggunakan relasi untuk menghubungkan antara table pasien dan tabel dokter.
-
-Saya hanya mampu menghasilkan seperti ini. Apabila terdapat kekurangannya atau belum sesuai dengan harapan Bapak/Ibu, saya mohon maaf dan akan menjadikannya sebagai bahan perbaikan ke depannya. Terimakasih
